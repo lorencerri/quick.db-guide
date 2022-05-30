@@ -55,10 +55,11 @@ export const Installation = () => {
             <Text mt="lg" weight={700}>
                 Drivers
             </Text>
-            <Text>
+            <Text color="dimmed" style={{ maxWidth: "800px" }}>
                 One of the following drivers are required so quick.db can
-                interact with the database. The default and recommended driver
-                is Sqlite.
+                interact with the database.
+                <br />
+                The default and recommended driver is SQLite.
             </Text>
             <Tabs
                 mt="lg"
