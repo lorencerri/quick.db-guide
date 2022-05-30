@@ -6,6 +6,7 @@ import {
     Burger,
     Anchor,
     Button,
+    Box,
 } from "@mantine/core";
 import { BrandDiscord, BrandGithub } from "tabler-icons-react";
 import { useStore } from "../store";
@@ -32,7 +33,7 @@ export const HeaderWrapper = () => {
                         quick.db guide
                     </Text>
                 </Group>
-                <MediaQuery largerThan="sm">
+                <MediaQuery smallerThan="sm" styles={{ display: "none" }}>
                     <Group spacing="sm">
                         <Anchor
                             href="https://discord.gg/plexidev"
@@ -45,6 +46,7 @@ export const HeaderWrapper = () => {
                                 Discord
                             </Button>
                         </Anchor>
+
                         <Anchor
                             href="https://github.com/lorencerri/quick.db-guide"
                             target="_blank"
