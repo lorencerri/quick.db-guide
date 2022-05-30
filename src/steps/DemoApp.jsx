@@ -52,6 +52,7 @@ export const DemoApp = () => {
                 {code}
             </Prism>
             <Group mt="lg">
+                <Subtext>Run:</Subtext>
                 <Button
                     color="green"
                     onClick={() => {
