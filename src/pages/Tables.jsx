@@ -6,11 +6,11 @@ const code = `const { QuickDB } = require("quick.db");
 const db = new QuickDB();
 
 async function myFunction() {
-	let economy = await db.get("economy");
-	
+    let economy = await db.get("economy");
+
     await economy.set("balance", 100);
-	await economy.get("balance"); // Returns -> 100
-	await db.get("balance"); // Returns -> undefined
+    await economy.get("balance"); // Returns -> 100
+    await db.get("balance"); // Returns -> undefined
 }
 
 myFunction();
