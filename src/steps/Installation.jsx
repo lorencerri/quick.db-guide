@@ -1,4 +1,4 @@
-import { Tabs, List, Code, Text, Anchor } from "@mantine/core";
+import { Tabs, List, Code, Text, Anchor, Divider } from "@mantine/core";
 import { BrandWindows, BrandUbuntu, BrandApple } from "tabler-icons-react";
 
 const { Item } = List;
@@ -41,6 +41,16 @@ export const Installation = () => {
                             <Code>npm i quick.db</Code>
                         </Item>
                     </List>
+                </Tabs.Tab>
+            </Tabs>
+            <Divider mt="lg" mb="lg" />
+            <h1 style={{ margin: 0 }}>Drivers</h1>
+            <Tabs mt="lg">
+                <Tabs.Tab label="Sqlite (Default)">
+                    <Code>npm i better-sqlite3</Code>
+                </Tabs.Tab>
+                <Tabs.Tab label="MySQL">
+                    <Code>npm i promise-mysql</Code>
                 </Tabs.Tab>
             </Tabs>
         </div>
