@@ -3,7 +3,7 @@ import { useStore } from "../store";
 
 import { Installation } from "../steps/Installation";
 import { Introduction } from "../steps/Introduction";
-import { Usage } from "../steps/Usage";
+import { BasicUsage } from "../steps/BasicUsage";
 
 export const ContentWrapper = () => {
     const step = useStore((state) => state.step);
@@ -14,7 +14,7 @@ export const ContentWrapper = () => {
         case 1:
             return <Installation />;
         case 2:
-            return <Usage />;
+            return <BasicUsage />;
         default:
             return <Center>Sorry, this step could not be found!</Center>;
     }

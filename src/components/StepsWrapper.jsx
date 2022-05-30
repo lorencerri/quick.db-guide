@@ -14,7 +14,7 @@ export const StepsWrapper = () => {
             width={{ base: 300 }}
             style={{ background: "transparent", border: "none" }}
         >
-            <Section grow m="md">
+            <Section grow m="lg">
                 <Steps />
             </Section>
         </Navbar>
