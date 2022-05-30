@@ -8,7 +8,9 @@ const useStore = create(set => ({
 		{ label: "Tables", path: "tables" },
 		{ label: "Using with Discord.js", path: "using-with-discordjs" },
 		{ label: "Demo App", path: "demo-app" },
-		{ label: "API Docs", path: "api" }],
+		{ label: "API Docs", path: "api" },
+		{ label: "Migration Guide", path: "migration" }],
+
 	step: 0,
 	opened: false,
 	setOpened: opened => set(state => ({ ...state, opened })),
