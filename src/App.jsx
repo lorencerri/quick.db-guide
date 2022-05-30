@@ -12,7 +12,7 @@ function App() {
             style={{
                 backgroundColor: "#141517",
                 color: "#FFFFFF",
-                height: "100vh",
+                minHeight: "100vh",
             }}
             navbar={<StepsWrapper />}
             header={<HeaderWrapper />}

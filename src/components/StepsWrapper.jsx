@@ -8,7 +8,12 @@ export const StepsWrapper = () => {
     const opened = useStore((state) => state.opened);
 
     return (
-        <Navbar hiddenBreakpoint="sm" hidden={!opened} width={{ base: 300 }}>
+        <Navbar
+            hiddenBreakpoint="sm"
+            hidden={!opened}
+            width={{ base: 300 }}
+            style={{ background: "transparent", border: "none" }}
+        >
             <Section grow m="md">
                 <Steps />
             </Section>
