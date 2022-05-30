@@ -1,6 +1,6 @@
 import { AppShell } from "@mantine/core";
 import { StepsWrapper } from "./components/StepsWrapper";
-import { Branding } from "./components/Branding";
+import { HeaderWrapper } from "./components/HeaderWrapper";
 
 function App() {
     return (
@@ -14,7 +14,7 @@ function App() {
                 height: "100vh",
             }}
             navbar={<StepsWrapper />}
-            header={<Branding />}
+            header={<HeaderWrapper />}
         >
             Hello World
         </AppShell>

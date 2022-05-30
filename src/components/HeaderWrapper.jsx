@@ -3,10 +3,10 @@ import { useStore } from "../state";
 
 const style = { fontFamily: "Source Sans Pro" };
 
-export const Branding = () => {
+export const HeaderWrapper = () => {
     const opened = useStore((state) => state.opened);
     const setOpened = useStore((state) => state.setOpened);
-    console.log(opened);
+
     return (
         <Header height={60}>
             <Group p="13px" spacing="sm">
