@@ -7,7 +7,7 @@ export const Steps = () => {
 
     return (
         <Stepper active={step} onStepClick={setStep} orientation="vertical">
-            <Stepper.Step label="Step 1" />
+            <Stepper.Step label="Introduction" />
             <Stepper.Step label="Step 2" />
             <Stepper.Step label="Step 3" />
             <Stepper.Step label="Step 4" />

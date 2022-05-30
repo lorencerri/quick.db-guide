@@ -6,7 +6,9 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <MantineProvider theme={{ colorScheme: "dark" }}>
+        <MantineProvider
+            theme={{ colorScheme: "dark", fontFamily: "Source Sans Pro" }}
+        >
             <App />
         </MantineProvider>
     </React.StrictMode>
