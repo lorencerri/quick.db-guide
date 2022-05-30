@@ -6,6 +6,7 @@ import { Introduction } from "../steps/Introduction";
 import { UsingWithDiscordjs } from "../steps/UsingWithDiscordjs";
 import { BasicUsage } from "../steps/BasicUsage";
 import { Tables } from "../steps/Tables";
+import { DemoApp } from "../steps/DemoApp";
 
 export const ContentWrapper = () => {
     const step = useStore((state) => state.step);
@@ -21,6 +22,8 @@ export const ContentWrapper = () => {
             return <Tables />;
         case 4:
             return <UsingWithDiscordjs />;
+        case 5:
+            return <DemoApp />;
         default:
             return <Center>Sorry, this step could not be found!</Center>;
     }
