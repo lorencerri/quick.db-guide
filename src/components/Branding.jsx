@@ -7,7 +7,7 @@ export const Branding = () => {
         <Header height={60}>
             <Group p="13px" spacing="sm">
                 <Text style={style} size="xl" weight={700}>
-                    quick.db demo
+                    quick.db guide
                 </Text>
             </Group>
         </Header>

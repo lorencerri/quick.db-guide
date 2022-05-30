@@ -2,8 +2,6 @@ import { AppShell } from "@mantine/core";
 import { StepsWrapper } from "./components/StepsWrapper";
 import { Branding } from "./components/Branding";
 
-import "./App.css";
-
 function App() {
     return (
         <AppShell
