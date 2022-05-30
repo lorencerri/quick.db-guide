@@ -7,7 +7,7 @@ import {
     Anchor,
     Button,
 } from "@mantine/core";
-import { BrandDiscord } from "tabler-icons-react";
+import { BrandDiscord, BrandGithub } from "tabler-icons-react";
 import { useStore } from "../store";
 
 const style = { fontFamily: "Source Sans Pro" };
@@ -32,15 +32,28 @@ export const HeaderWrapper = () => {
                         quick.db guide
                     </Text>
                 </Group>
-                <Anchor href="https://discord.gg/plexidev" target="_blank">
-                    <Button
-                        style={{ background: "#5865F2" }}
-                        leftIcon={<BrandDiscord size={18} />}
-                        mr="sm"
+                <Group spacing="sm">
+                    <Anchor href="https://discord.gg/plexidev" target="_blank">
+                        <Button
+                            style={{ background: "#5865F2" }}
+                            leftIcon={<BrandDiscord size={18} />}
+                        >
+                            Discord
+                        </Button>
+                    </Anchor>
+                    <Anchor
+                        href="https://github.com/lorencerri/quick.db-guide"
+                        target="_blank"
                     >
-                        Discord
-                    </Button>
-                </Anchor>
+                        <Button
+                            style={{ background: "gray" }}
+                            leftIcon={<BrandGithub size={18} />}
+                            mr="sm"
+                        >
+                            Edit on GitHub
+                        </Button>
+                    </Anchor>
+                </Group>
             </Group>
         </Header>
     );
