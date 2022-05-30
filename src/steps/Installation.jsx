@@ -1,9 +1,12 @@
-import { Tabs, List, Code, Text, Anchor, Divider } from "@mantine/core";
+import { Tabs, List, Code, Text, Anchor, Button } from "@mantine/core";
 import { BrandWindows, BrandUbuntu, BrandApple } from "tabler-icons-react";
+import { useStore } from "../store";
 
 const { Item } = List;
 
 export const Installation = () => {
+    const increment = useStore((state) => state.increment);
+
     return (
         <div style={{ margin: "10px" }}>
             <Text weight={700}>Package</Text>
@@ -71,6 +74,9 @@ export const Installation = () => {
                     <Code>npm i promise-mysql</Code>
                 </Tabs.Tab>
             </Tabs>
+            <Button mt="lg" onClick={increment}>
+                Usage
+            </Button>
         </div>
     );
 };
