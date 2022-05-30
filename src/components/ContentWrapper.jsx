@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import { Center } from "@mantine/core";
 import { useStore } from "../store";
+import { Routes, Route } from "react-router-dom";
 
 import { Installation } from "../steps/Installation";
 import { Introduction } from "../steps/Introduction";
@@ -9,22 +11,32 @@ import { Tables } from "../steps/Tables";
 import { DemoApp } from "../steps/DemoApp";
 
 export const ContentWrapper = () => {
-    const step = useStore((state) => state.step);
+    const steps = useStore((state) => state.steps);
+    const setStep = useStore((state) => state.setStep);
 
-    switch (step) {
-        case 0:
-            return <Introduction />;
-        case 1:
-            return <Installation />;
-        case 2:
-            return <BasicUsage />;
-        case 3:
-            return <Tables />;
-        case 4:
-            return <UsingWithDiscordjs />;
-        case 5:
-            return <DemoApp />;
-        default:
-            return <Center>Sorry, this step could not be found!</Center>;
-    }
+    useEffect(() => {
+        const path = window.location.pathname;
+        const step = steps.findIndex(
+            (step) => step.path && path.endsWith(step.path)
+        );
+        if (step !== -1) setStep(step);
+    }, []);
+
+    return (
+        <Routes>
+            <Route path="/" element={<Introduction />} />
+            <Route path="/installation" element={<Installation />} />
+            <Route
+                path="/using-with-discordjs"
+                element={<UsingWithDiscordjs />}
+            />
+            <Route path="/basic-usage" element={<BasicUsage />} />
+            <Route path="/tables" element={<Tables />} />
+            <Route path="/demo-app" element={<DemoApp />} />
+            <Route
+                path="*"
+                element={<Center>Sorry, this step could not be found!</Center>}
+            />
+        </Routes>
+    );
 };

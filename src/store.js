@@ -1,7 +1,13 @@
 import create from 'zustand'
 
 const useStore = create(set => ({
-	steps: ["Introduction", "Installation", "Basic Usage", "Tables", "Using with Discord.js", "Demo App"],
+	steps: [
+		{ label: "Introduction", path: "" },
+		{ label: "Installation", path: "installation" },
+		{ label: "Basic Usage", path: "basic-usage" },
+		{ label: "Tables", path: "tables" },
+		{ label: "Using with Discord.js", path: "using-with-discordjs" },
+		{ label: "Demo App", path: "demo-app" }],
 	step: 0,
 	opened: false,
 	setOpened: opened => set(state => ({ ...state, opened })),
