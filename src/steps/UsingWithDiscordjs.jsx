@@ -15,7 +15,7 @@ client.on("messageCreate", async (message) => {
 	// Increment user's messageCount by 1
 	await db.add(\`messageCount_\${authorId}\`, 1);
 
-	// Output user's messageCount
+	// Output user's messageCount. Typically, this would be output in a separate command.
 	let messageCount = await db.get(\`messageCount_\${authorId}\`);
 	console.log(\`User with the ID of \${authorId} has \${messageCount} messages.\`);
 });`;
