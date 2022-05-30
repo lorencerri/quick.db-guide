@@ -1,7 +1,7 @@
 import create from 'zustand'
 
 const useStore = create(set => ({
-	steps: ["Introduction", "Installation", "Basic Usage", "Tables"],
+	steps: ["Introduction", "Installation", "Basic Usage", "Tables", "Using with Discord.js"],
 	step: 0,
 	opened: false,
 	setOpened: opened => set(state => ({ ...state, opened })),
