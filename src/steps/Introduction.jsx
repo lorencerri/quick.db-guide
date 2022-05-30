@@ -6,6 +6,7 @@ const { Item } = List;
 
 export const Introduction = () => {
     const increment = useStore((state) => state.increment);
+    const setStep = useStore((state) => state.setStep);
 
     return (
         <div style={{ margin: "10px" }}>
@@ -51,8 +52,11 @@ export const Introduction = () => {
                 </Item>
                 <Item>& more...</Item>
             </List>
-            <Button mt="lg" onClick={increment}>
+            <Button mt="lg" mr="sm" onClick={increment}>
                 Installation
+            </Button>
+            <Button mt="lg" onClick={() => setStep(2)}>
+                Basic Usage
             </Button>
         </div>
     );

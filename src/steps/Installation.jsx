@@ -77,7 +77,7 @@ export const Installation = () => {
                 </Tabs.Tab>
             </Tabs>
             <Button mt="lg" onClick={increment}>
-                Usage
+                Basic Usage
             </Button>
         </div>
     );
