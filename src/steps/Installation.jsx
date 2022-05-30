@@ -1,5 +1,6 @@
 import { Tabs, List, Code, Text, Anchor, Button } from "@mantine/core";
 import { BrandWindows, BrandUbuntu, BrandApple } from "tabler-icons-react";
+import { Subtext } from "../components/Subtext";
 import { useStore } from "../store";
 
 const { Item } = List;
@@ -19,17 +20,6 @@ export const Installation = () => {
             >
                 <Tabs.Tab label="Windows" icon={<BrandWindows size={14} />}>
                     <Code>npm i quick.db</Code>
-                    <Text mt="sm">
-                        {" "}
-                        You may need to do some additional steps found{" "}
-                        <Anchor
-                            href="https://github.com/WiseLibs/better-sqlite3/blob/master/docs/troubleshooting.md"
-                            target="_blank"
-                        >
-                            here
-                        </Anchor>{" "}
-                        to finish the installation.
-                    </Text>
                 </Tabs.Tab>
                 <Tabs.Tab label="Linux" icon={<BrandUbuntu size={14} />}>
                     <Code>npm i quick.db</Code>
@@ -55,12 +45,12 @@ export const Installation = () => {
             <Text mt="lg" weight={700}>
                 Drivers
             </Text>
-            <Text color="dimmed" style={{ maxWidth: "800px" }}>
+            <Subtext>
                 One of the following drivers are required so quick.db can
                 interact with the database.
                 <br />
                 The default and recommended driver is SQLite.
-            </Text>
+            </Subtext>
             <Tabs
                 mt="lg"
                 pl="sm"
@@ -70,6 +60,17 @@ export const Installation = () => {
             >
                 <Tabs.Tab label="Sqlite (Default)">
                     <Code>npm i better-sqlite3</Code>
+                    <Subtext mt="sm">
+                        Occasionally, installing better-sqlite3 has some issues.
+                        You can view{" "}
+                        <Anchor
+                            href="https://github.com/WiseLibs/better-sqlite3/blob/master/docs/troubleshooting.md"
+                            target="_blank"
+                        >
+                            this
+                        </Anchor>{" "}
+                        post to help troubleshoot installation.
+                    </Subtext>
                 </Tabs.Tab>
                 <Tabs.Tab label="MySQL">
                     <Code>npm i promise-mysql</Code>

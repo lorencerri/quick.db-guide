@@ -1,5 +1,6 @@
 import { Anchor, Divider, List, Button } from "@mantine/core";
 import { useStore } from "../store";
+import { Subtext } from "../components/Subtext";
 
 const { Item } = List;
 
@@ -10,7 +11,7 @@ export const Introduction = () => {
         <div style={{ margin: "10px" }}>
             <h1 style={{ margin: 0 }}>Hey There 👋</h1>
             <Divider mt="lg" mb="lg" />
-            <p>
+            <Subtext mb="lg">
                 Quick.db is an open-source package meant to provide an easy way
                 for beginners and people of all levels to access & store data in
                 a low to medium volume environment. All data is stored
@@ -29,7 +30,7 @@ export const Introduction = () => {
                     promise-mysql
                 </Anchor>{" "}
                 and comes way various other quality-of-life features.
-            </p>
+            </Subtext>
             <List>
                 <Item>
                     <b>Persistent Storage</b> - Data doesn't disappear through

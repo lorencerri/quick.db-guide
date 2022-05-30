@@ -1,5 +1,6 @@
 import { Text, Code } from "@mantine/core";
 import { Prism } from "@mantine/prism";
+import { Subtext } from "../components/Subtext";
 
 const initializing = `const { QuickDB } = require("quick.db");
 const db = new QuickDB();`;
@@ -38,23 +39,23 @@ export const Usage = () => {
             <Text mt="sm" weight={700}>
                 Initializing
             </Text>
-            <Text color="dimmed" style={{ maxWidth: "800px" }}>
+            <Subtext>
                 Wherever you need to use quick.db, you need to initialize the db
                 variable so it can be used. You can either do this in the file
                 using the below example, or somehow pass it to the file so it
                 can be accessed.
-            </Text>
+            </Subtext>
             <Prism withLineNumbers noCopy language="js">
                 {initializing}
             </Prism>
             <Text mt="sm" weight={700}>
                 Usage
             </Text>
-            <Text color="dimmed" style={{ maxWidth: "800px" }}>
+            <Subtext>
                 Since quick.db's methods are asynchronous, you need to declare
                 the surrounding function as async. Below is an example of this
                 usage, as well as some demo code.
-            </Text>
+            </Subtext>
             <Prism withLineNumbers noCopy language="js">
                 {demoCode}
             </Prism>
