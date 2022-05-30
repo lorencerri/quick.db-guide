@@ -9,6 +9,7 @@ import { UsingWithDiscordjs } from "../pages/UsingWithDiscordjs";
 import { BasicUsage } from "../pages/BasicUsage";
 import { Tables } from "../pages/Tables";
 import { DemoApp } from "../pages/DemoApp";
+import { Api } from "../pages/Api";
 
 export const ContentWrapper = () => {
     const location = useLocation();
@@ -34,6 +35,7 @@ export const ContentWrapper = () => {
             <Route path="/basic-usage" element={<BasicUsage />} />
             <Route path="/tables" element={<Tables />} />
             <Route path="/demo-app" element={<DemoApp />} />
+            <Route path="/api" element={<Api />} />
             <Route
                 path="*"
                 element={<Center>Sorry, this step could not be found!</Center>}
