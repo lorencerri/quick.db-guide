@@ -107,7 +107,7 @@ export const BasicUsage = () => {
             </Text>
             <Subtext>
                 Quick.db has a multitude of methods that you can find on the API
-                page. Below are a few that are commonly used.
+                page. The two most commonly used ones are get and set.
             </Subtext>
             <Prism withLineNumbers noCopy language="js">
                 {setGet}
