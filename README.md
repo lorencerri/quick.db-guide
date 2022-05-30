@@ -1,5 +1,5 @@
 ### quick.db-guide
-A simple web-app to display how to use quick.db
+A simple, interactive web-app on how to use quick.db
 
 https://quick-db-guide.vercel.app
 
