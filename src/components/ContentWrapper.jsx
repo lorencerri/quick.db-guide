@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Center } from "@mantine/core";
 import { useStore } from "../store";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import { Installation } from "../pages/Installation";
 import { Introduction } from "../pages/Introduction";
@@ -11,6 +11,7 @@ import { Tables } from "../pages/Tables";
 import { DemoApp } from "../pages/DemoApp";
 
 export const ContentWrapper = () => {
+    const location = useLocation();
     const steps = useStore((state) => state.steps);
     const setStep = useStore((state) => state.setStep);
 
@@ -20,7 +21,7 @@ export const ContentWrapper = () => {
             (step) => step.path && path.endsWith(step.path)
         );
         if (step !== -1) setStep(step);
-    }, []);
+    }, [location]);
 
     return (
         <Routes>

@@ -1,13 +1,10 @@
 import { Anchor, Divider, List, Button } from "@mantine/core";
-import { useStore } from "../store";
+import { Link } from "react-router-dom";
 import { Subtext } from "../components/Subtext";
 
 const { Item } = List;
 
 export const Introduction = () => {
-    const increment = useStore((state) => state.increment);
-    const setStep = useStore((state) => state.setStep);
-
     return (
         <div style={{ margin: "10px" }}>
             <h1 style={{ margin: 0 }}>Hey There 👋</h1>
@@ -52,12 +49,14 @@ export const Introduction = () => {
                 </Item>
                 <Item>& more...</Item>
             </List>
-            <Button mt="lg" mr="sm" onClick={increment}>
-                Installation
-            </Button>
-            <Button mt="lg" onClick={() => setStep(2)}>
-                Basic Usage
-            </Button>
+            <Link to="/installation">
+                <Button mt="lg" mr="sm">
+                    Installation
+                </Button>
+            </Link>
+            <Link to="/basic-usage">
+                <Button mt="lg">Basic Usage</Button>
+            </Link>
         </div>
     );
 };
