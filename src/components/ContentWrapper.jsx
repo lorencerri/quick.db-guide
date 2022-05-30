@@ -3,12 +3,12 @@ import { Center } from "@mantine/core";
 import { useStore } from "../store";
 import { Routes, Route } from "react-router-dom";
 
-import { Installation } from "../steps/Installation";
-import { Introduction } from "../steps/Introduction";
-import { UsingWithDiscordjs } from "../steps/UsingWithDiscordjs";
-import { BasicUsage } from "../steps/BasicUsage";
-import { Tables } from "../steps/Tables";
-import { DemoApp } from "../steps/DemoApp";
+import { Installation } from "../pages/Installation";
+import { Introduction } from "../pages/Introduction";
+import { UsingWithDiscordjs } from "../pages/UsingWithDiscordjs";
+import { BasicUsage } from "../pages/BasicUsage";
+import { Tables } from "../pages/Tables";
+import { DemoApp } from "../pages/DemoApp";
 
 export const ContentWrapper = () => {
     const steps = useStore((state) => state.steps);
