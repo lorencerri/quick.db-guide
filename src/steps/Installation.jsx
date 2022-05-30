@@ -6,8 +6,14 @@ const { Item } = List;
 export const Installation = () => {
     return (
         <div style={{ margin: "10px" }}>
-            <h1 style={{ margin: 0 }}>Installation</h1>
-            <Tabs mt="lg">
+            <Text weight={700}>Package</Text>
+            <Tabs
+                mt="lg"
+                pl="sm"
+                pb="sm"
+                pr="sm"
+                style={{ background: "#1A1B1E", borderRadius: "10px" }}
+            >
                 <Tabs.Tab label="Windows" icon={<BrandWindows size={14} />}>
                     <Code>npm i quick.db</Code>
                     <Text mt="sm">
@@ -43,9 +49,21 @@ export const Installation = () => {
                     </List>
                 </Tabs.Tab>
             </Tabs>
-            <Divider mt="lg" mb="lg" />
-            <h1 style={{ margin: 0 }}>Drivers</h1>
-            <Tabs mt="lg">
+            <Text mt="lg" weight={700}>
+                Drivers
+            </Text>
+            <Text>
+                One of the following drivers are required so quick.db can
+                interact with the database. The default and recommended driver
+                is Sqlite.
+            </Text>
+            <Tabs
+                mt="lg"
+                pl="sm"
+                pb="sm"
+                pr="sm"
+                style={{ background: "#1A1B1E", borderRadius: "10px" }}
+            >
                 <Tabs.Tab label="Sqlite (Default)">
                     <Code>npm i better-sqlite3</Code>
                 </Tabs.Tab>
