@@ -97,8 +97,7 @@ export const BasicUsage = () => {
             </Text>
             <Subtext>
                 Since quick.db's methods are asynchronous, the surrounding
-                function where quick.db is being used has to be async. Although,
-                the two most commonly used ones are .set() and .get().
+                function where quick.db is being used has to be async.
             </Subtext>
             <Prism withLineNumbers noCopy language="js">
                 {asyncAwait}
