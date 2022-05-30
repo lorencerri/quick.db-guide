@@ -1,21 +1,16 @@
-import { useStore } from "../state";
+import { useStore } from "../store";
 import { Stepper } from "@mantine/core";
 
 export const Steps = () => {
     const step = useStore((state) => state.step);
     const setStep = useStore((state) => state.setStep);
+    const steps = useStore((state) => state.steps);
 
     return (
         <Stepper active={step} onStepClick={setStep} orientation="vertical">
-            <Stepper.Step label="Introduction" />
-            <Stepper.Step label="Step 2" />
-            <Stepper.Step label="Step 3" />
-            <Stepper.Step label="Step 4" />
-            <Stepper.Step label="Step 5" />
-            <Stepper.Step label="Step 6" />
-            <Stepper.Step label="Step 7" />
-            <Stepper.Step label="Step 8" />
-            <Stepper.Step label="Step 9" />
+            {steps.map((step, index) => {
+                return <Stepper.Step key={index} label={step} />;
+            })}
         </Stepper>
     );
 };

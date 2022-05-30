@@ -1,6 +1,7 @@
 import create from 'zustand'
 
 const useStore = create(set => ({
+	steps: ["Introduction", "Installation"],
 	step: 0,
 	opened: false,
 	setOpened: opened => set(state => ({ ...state, opened })),

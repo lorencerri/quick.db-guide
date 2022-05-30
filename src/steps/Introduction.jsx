@@ -1,9 +1,9 @@
 import { Anchor, Divider, List, Button } from "@mantine/core";
-import { useStore } from "../state";
+import { useStore } from "../store";
 
 const { Item } = List;
 
-export const StepZero = () => {
+export const Introduction = () => {
     const increment = useStore((state) => state.increment);
 
     return (
@@ -51,7 +51,7 @@ export const StepZero = () => {
                 <Item>& more...</Item>
             </List>
             <Button mt="lg" onClick={increment}>
-                Install
+                Installation
             </Button>
         </div>
     );

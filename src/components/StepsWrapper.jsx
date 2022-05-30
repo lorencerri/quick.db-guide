@@ -1,6 +1,6 @@
 import { Navbar } from "@mantine/core";
 import { Steps } from "./Steps";
-import { useStore } from "../state";
+import { useStore } from "../store";
 
 const { Section } = Navbar;
 

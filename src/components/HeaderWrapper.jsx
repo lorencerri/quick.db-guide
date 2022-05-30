@@ -1,5 +1,5 @@
 import { Header, Group, Text, MediaQuery, Burger } from "@mantine/core";
-import { useStore } from "../state";
+import { useStore } from "../store";
 
 const style = { fontFamily: "Source Sans Pro" };
 
