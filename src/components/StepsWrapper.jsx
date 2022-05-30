@@ -1,11 +1,14 @@
 import { Navbar } from "@mantine/core";
+import { Steps } from "./Steps";
+import { useStore } from "../state";
+
 const { Section } = Navbar;
 
-import { Steps } from "./Steps";
-
 export const StepsWrapper = () => {
+    const opened = useStore((state) => state.opened);
+
     return (
-        <Navbar width={{ base: 300 }}>
+        <Navbar hiddenBreakpoint="sm" hidden={!opened} width={{ base: 300 }}>
             <Section grow m="md">
                 <Steps />
             </Section>

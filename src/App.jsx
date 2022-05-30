@@ -6,7 +6,13 @@ function App() {
     return (
         <AppShell
             padding="md"
-            style={{ backgroundColor: "#141517", color: "#FFFFFF" }}
+            navbarOffsetBreakpoint="sm"
+            asideOffsetBreakpoint="sm"
+            style={{
+                backgroundColor: "#141517",
+                color: "#FFFFFF",
+                height: "100vh",
+            }}
             navbar={<StepsWrapper />}
             header={<Branding />}
         >
