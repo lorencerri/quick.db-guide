@@ -1,9 +1,26 @@
 import { Tabs, List, Code, Text, Anchor, Button } from "@mantine/core";
 import { BrandWindows, BrandUbuntu, BrandApple } from "tabler-icons-react";
+import { Prism } from "@mantine/prism";
 import { Subtext } from "../components/Subtext";
 import { Link } from "react-router-dom";
 
 const { Item } = List;
+
+const mysql = `const { QuickDB, MySQLDriver } = require('quick.db');
+
+(async () => {
+    const mysql = new MySQLDriver({
+        host:     'localhost',
+        user:     'me',
+        password: 'secret',
+        database: 'my_db'
+    });
+    
+    // Important: Connect to MySQL server before using it
+    await mysql.connect();
+    
+    const db = new QuickDB({ driver: mysql });
+})();`;
 
 export const Installation = () => {
     return (
@@ -69,9 +86,21 @@ export const Installation = () => {
                         </Anchor>{" "}
                         post to help troubleshoot installation.
                     </Subtext>
+                    <Text weight={700} mt="lg">
+                        Initialization
+                    </Text>
+                    <Prism withLineNumbers noCopy language="js">
+                        {`const { QuickDB } = require('quick.db');\nconst db = new QuickDB();`}
+                    </Prism>
                 </Tabs.Tab>
                 <Tabs.Tab label="MySQL">
                     <Code>npm i promise-mysql</Code>
+                    <Text weight={700} mt="lg">
+                        Initialization
+                    </Text>
+                    <Prism withLineNumbers noCopy language="js">
+                        {mysql}
+                    </Prism>
                 </Tabs.Tab>
             </Tabs>
             <Link to="/basic-usage">
