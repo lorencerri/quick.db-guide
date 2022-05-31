@@ -6,7 +6,7 @@ const code = `const { QuickDB } = require("quick.db");
 const db = new QuickDB();
 
 async function myFunction() {
-    let economy = await db.get("economy");
+    let economy = db.table("economy");
 
     await economy.set("balance", 100);
     await economy.get("balance"); // Returns -> 100
