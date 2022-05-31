@@ -18,7 +18,10 @@ export const HeaderWrapper = () => {
     const setOpened = useStore((state) => state.setOpened);
 
     return (
-        <Header height={60}>
+        <Header
+            height={60}
+            style={{ background: "transparent", border: "none" }}
+        >
             <Group position="apart">
                 <Group p="13px" spacing="sm">
                     <MediaQuery largerThan="sm" styles={{ display: "none" }}>

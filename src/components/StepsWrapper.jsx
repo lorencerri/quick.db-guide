@@ -1,4 +1,4 @@
-import { Navbar } from "@mantine/core";
+import { Navbar, MediaQuery } from "@mantine/core";
 import { Steps } from "./Steps";
 import { useStore } from "../store";
 
@@ -12,7 +12,10 @@ export const StepsWrapper = () => {
             hiddenBreakpoint="sm"
             hidden={!opened}
             width={{ base: 300 }}
-            style={{ background: "transparent", border: "none" }}
+            style={{
+                background: "transparent",
+                border: "none",
+            }}
         >
             <Section grow m="lg">
                 <Steps />
